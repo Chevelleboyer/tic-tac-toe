@@ -12,4 +12,7 @@ class Game
 	def winner
 		@winner
 	end
+
+	def over?
+	end
 end
