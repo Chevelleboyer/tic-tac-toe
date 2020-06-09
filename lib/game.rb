@@ -17,6 +17,7 @@ class Game
 	end
 
 	def tie?
+		true
 	end
-	
+
 end
