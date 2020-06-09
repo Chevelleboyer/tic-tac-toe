@@ -14,7 +14,7 @@ class Game
 	end
 
 	def over?
-		if Board.new({
+		if :locations == Board.new({
 			top: {left: :fake, middle: :fake, right: :fake},
   			middle: {left: :fake, middle: :fake, right: :fake},
   			bottom: {left: :fake, middle: :fake, right: :fake}
@@ -23,7 +23,6 @@ class Game
 		else
 			false
 		end
-
 	end
 
 	def tie?
