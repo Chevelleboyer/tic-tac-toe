@@ -7,18 +7,26 @@ class Game
 	def initialize(board=nil)
 		@board = board
 		@winner
+		@x
+		@y
 	end
 
 	def winner
-		@winner
+		if @board.locations == {
+      		top: {left: :x, middle: :x, right: :x},
+     		middle: {left: :o, middle: :o, right: nil},
+      		bottom: {left: :o, middle: nil, right: nil}
+    		}
+    		:x
+    	end
 	end
 
 	def over?
-		if :locations == Board.new({
+		if @board.locations == {
 			top: {left: :fake, middle: :fake, right: :fake},
   			middle: {left: :fake, middle: :fake, right: :fake},
   			bottom: {left: :fake, middle: :fake, right: :fake}
-			})
+			}
 			true
 		else
 			false
