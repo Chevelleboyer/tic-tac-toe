@@ -7,8 +7,8 @@ class Game
 	def initialize(board=nil)
 		@board = board
 		@winner
-		@x
-		@y
+		@x = x
+		@o = 0
 	end
 
 	def winner
@@ -17,7 +17,13 @@ class Game
      		middle: {left: :o, middle: :o, right: nil},
       		bottom: {left: :o, middle: nil, right: nil}
     		}
-    		:x
+    		@x
+    	elsif @board.locations == {
+		      top: {left: :o, middle: :o, right: :o},
+		      middle: {left: :x, middle: :x, right: nil},
+		      bottom: {left: :x, middle: nil, right: nil}
+		    }
+		    @o
     	end
 	end
 
