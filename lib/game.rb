@@ -7,8 +7,8 @@ class Game
 	def initialize(board=nil)
 		@board = board
 		@winner
-		@x = x
-		@o = 0
+		@x
+		@o
 	end
 
 	def winner
