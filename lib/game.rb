@@ -15,4 +15,8 @@ class Game
 
 	def over?
 	end
+
+	def tie?
+	end
+	
 end
